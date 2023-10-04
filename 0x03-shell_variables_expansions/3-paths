@@ -1,2 +1,0 @@
-#!/bin/bsh
-echo $PATH |tr ":" "\n" | wc -1
