@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Counter variable
+counter=0
+
+# Loop using until
+until [ $counter -eq 10 ]
+do
+    echo "Best School"
+    # Increment counter
+    ((counter++))
+done
