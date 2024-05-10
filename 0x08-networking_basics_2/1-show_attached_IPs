@@ -1,0 +1,7 @@
+#!/bin/bash
+
+active_ips=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | awk '{print $2}')
+
+echo "Active IPv4 IPs on this machine:"
+echo "$active_ips"
+
