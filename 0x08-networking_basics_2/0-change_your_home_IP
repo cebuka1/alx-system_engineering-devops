@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Function to update /etc/hosts file
+update_hosts() {
+    sudo sed -i "s/$1/$2/g" /etc/hosts
+}
+
+# Original IP addresses
+original_localhost="127.0.0.1"
+original_facebook="157.240.11.35"
+
+# New IP addresses
+new_localhost="127.0.0.2"
+new_facebook="8.8.8.8"
+
+# Update /etc/hosts
+update_hosts $original_localhost $new_localhost
+update_hosts "facebook.com" $new_facebook
+
+echo "Configured localhost to $new_localhost and facebook.com to $new_facebook"
